@@ -1,0 +1,27 @@
+<main id="recettesFav">
+    <div id="en-tete"></div>
+    <h1>Mes recettes</h1>
+    <section id="produits" class="row">
+        <?php if($myRecipes != false):
+                foreach($myRecipes as $value): ?>
+                <article class="col-sm-12 col-md-6 col-xl-4">
+                    <div class="imgProduits" style="background-image:url(<?= $value['imgSrcRecipe'] ?>)">
+                        <img class='fav' src='img/icons/fullheart.png' alt='heart' data-fav='<?= $value["idRecipe"] ?>'>
+                        <!-- Vérification avant suppression favoris -->
+                        <div id="verifFav" data-fav='<?= $value["idRecipe"] ?>' hidden>
+                            <p>Êtes-vous sûr de vouloir supprimer cette recette de vos favoris ?</p>
+                            <span class="yes" data-fav='<?= $value["idRecipe"] ?>'>Oui</span>
+                            <span class="no">Non</span>
+                        </div>
+                        <!-- ************* -->
+                    </div>
+                    <a href="recipe.php?id=<?= $value['idRecipe'] ?>">
+                        <h2><?= $value["recipeName"] ?></h2>
+                    </a>
+                </article>
+                <?php endforeach; ?>
+        <?php else: ?>
+        <div class="alert alert-danger" role="alert">Vous n'avez pas de recettes favorites !</div>
+        <?php endif; ?> 
+    </section>
+</main>

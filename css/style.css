@@ -1,0 +1,880 @@
+html
+{
+    font-size: 62.5%;
+}
+body
+{
+	font-size: 1.6rem;
+    margin: 0;
+    font-family: 'Source Sans Pro';
+}
+#header-contenu, main, .navMobile, #layout header
+{
+    width: 87%;
+    margin: auto!important;
+}
+.lightfont
+{
+    font-family: 'Montserrat Alternates';
+}
+.alert
+{
+    text-align: center;
+}
+.frame
+{
+    width: 50%;
+    z-index: 0;
+    margin-left: -5rem;
+}
+.frame iframe 
+{
+    height: 85%;
+    width: 100%;
+    display: block;
+}
+@keyframes bounce
+{ 
+    from {transform: translateY(0);} 
+    to {transform: translateY(-7px);}
+}
+@keyframes bounceNone
+{ 
+    0% {transform: translateX(0);} 
+    25% {transform: translateX(5px);}
+    50% {transform: translateX(0);}
+    75% {transform: translateX(-5px);}
+    100% {transform: translateX(0);}
+}
+
+/********************************************************************************/
+
+/********** INDEX **********/
+
+/* HEADER */
+#accueil header
+{
+    background: linear-gradient(
+        rgba(242, 96, 121, 0.85), 
+        rgba(242, 96, 121, 0.85)
+      ),url('../img/photos/food-fruit-grapes-197907.jpg') no-repeat left;
+    background-size: cover;
+}
+#accueil .logo
+{
+    width: 210px;
+    height: auto;
+}
+#accueil .desktopIndexMenu
+{
+    padding-top: 2rem;
+}
+#accueil .desktopIndexMenu a
+{
+    padding-top: 4rem;
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-decoration: none;
+}
+#accueil .desktopIndexMenu a::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: width .3s;
+}
+#accueil .desktopIndexMenu a:hover::after
+{
+    width: 100%;
+    transition: width .3s;
+}
+#accueil .text-index-header
+{
+    padding: 21rem 0 28rem 0;
+}
+#accueil .text-index-header p
+{
+    font-size: 8.5rem;
+    font-weight: bold;
+    line-height: initial;
+    letter-spacing: 0.2rem;
+}
+#accueil .text-index-header a
+{
+    padding: 1rem 6rem;
+    border-radius: 3rem;
+    border: 1px solid;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background: rgba(217, 119, 135, 0.85);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+#accueil .text-index-header a:hover
+{
+    background: rgba(255, 255, 255, 0.7);
+    color: rgb(217, 119, 135);
+    transition-duration: 0.4s;
+}
+#accueil .milkshakefraise
+{
+    position: absolute;
+    right: 2%;
+    top: 30rem;
+    width: 48rem;
+    height: auto;
+}
+#accueil .mobileIndexMenu
+{
+    display: none;
+}
+#accueil .navMobile
+{
+    background:rgba(242, 98, 121, 0.9);
+    position: absolute;
+    left: 6.5%;
+    top: 87.4%;
+    display: none;
+    line-height: 6rem;
+    color: white;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: 700;
+    transition-duration: 0.5s;
+    padding: 2rem 0;
+}
+#accueil .navMobile a:hover
+{
+    background: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.5s;
+}
+
+/* MAIN */
+#accueil main img
+{
+    max-width: 40%;
+    padding: 0;
+}
+
+/* MAIN PRESENTATION */
+#accueil #presentation article
+{
+    margin-top: 3rem;
+}
+#accueil #presentation article div
+{
+    font-weight: 600;
+}
+#accueil #presentation > div
+{
+    border: 0.4rem solid rgb(98, 201, 125);
+    margin-top: -6rem;
+    padding: 7rem 5rem 2rem;
+    width: max-content;
+}
+#accueil #presentation div h1
+{
+    font-size: 9rem;
+    font-weight: 700;
+}
+#accueil #presentation div p
+{
+    font-size: 2.5rem;
+}
+
+/* MAIN PRODUITS */
+#accueil #produits h2
+{
+    text-align: center;
+    font-size: 9rem;
+    font-weight: 700;
+    margin: 6rem 0 7rem;
+}
+#accueil #produits hr
+{
+    width: 13%;
+    border:0.2rem solid rgb(98, 201, 125);
+    margin-bottom: 8rem;
+}
+#accueil #produits article
+{
+    margin-bottom: 5rem;
+    text-align: -webkit-center;
+}
+#accueil #produits .imgProduits
+{
+    height: 38rem;
+}
+#accueil #produits .block
+{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-top: -4rem;
+    border: 0.4rem solid rgb(242, 96, 121);
+    padding: 5rem 0rem 2rem;
+    width: 70%;
+}
+#accueil #produits .block h3
+{
+    font-weight: 700;
+    font-size: 4rem;
+    max-width: 82%; 
+    margin: auto;
+}
+
+/* MAIN FINDUS + BAR FINDUS*/
+#findUs
+{
+    margin: 15rem 0 0 1rem;
+}
+.title-text
+{
+    width: 52%;
+    z-index: 2;
+}
+.title-findUs
+{
+    border: 0.4rem solid rgb(98, 201, 125);
+    margin-top: -6rem;
+    padding: 2rem 4rem 2rem;
+}
+.title-findUs h2
+{
+    font-size: 9rem;
+    font-weight: 700;
+}
+.title-findUs p
+{
+    font-size: 2.5rem;
+}
+.text-findUs
+{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 7rem 0 4rem;
+}
+.text-findUs .lightfont
+{
+    width: 80%;
+    margin: 6rem auto;
+}
+
+/* MAIN DIY */
+#accueil #diy h2
+{
+    font-size: 9rem;
+    font-weight: 700;
+}
+#accueil #diy div
+{
+    margin: 4rem 0 6rem;
+}
+#accueil #diy div img
+{
+    max-width: 30%;
+    height: auto;
+    box-shadow: 7px 8px 29px -11px;
+}
+#accueil #diy div div h4
+{
+    font-size: 3rem;
+}
+#accueil #diy div div p
+{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+#accueil #diy div div a
+{
+    padding: 1rem 6rem;
+    border-radius: 3rem;
+    border: 1px solid;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(217, 119, 135);
+    font-size: 2.5rem;
+    font-weight: 600;
+    transition-duration: 0.5s;
+}
+#accueil #diy div div a:hover
+{
+    background: rgb(217, 119, 135);
+    color: white;
+    transition-duration: 0.4s;
+}
+
+/* FOOTER */
+footer
+{
+    padding: 25px;
+    background: rgb(242, 96, 121);
+    text-align: center;
+    color:white;
+    margin-top: 6rem;
+}
+footer p
+{
+    font-weight: 800;
+}
+footer p:nth-child(2)
+{
+    font-size: 2.4rem;
+}
+footer img
+{
+    width: 50px;
+}
+footer a:hover .reseaux
+{
+    animation: bounce 0.35s ease infinite alternate;
+}
+
+/********************************************************************************/
+
+/********** LAYOUT **********/
+
+/* HEADER */
+#layout header
+{
+    font-size: 2.3rem;
+    margin: 0 auto 6rem;
+    padding-top: 3rem;
+}
+#layout header section
+{
+    display: none;
+}
+#layout .navDesktop a
+{
+    color: black;
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+#layout header a img
+{
+    width: 20rem;
+}
+#layout .navMobile
+{
+    background:rgba(242, 98, 121, 0.8);
+    position: absolute;
+    left: 6.5%;
+    top: 19.7%;
+    display: none;
+    line-height: 6rem;
+    z-index:1;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 3rem;
+    font-weight: 700;
+    transition-duration: 0.5s;
+}
+#layout .navMobile a:hover
+{
+    background: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.5s;
+}
+#layout .navDesktop a::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: width .3s;
+}
+#layout .navDesktop a:hover::after
+{
+    width: 100%;
+    transition: width .3s;
+}
+#layout .infoUser
+{
+    text-align: center;
+    font-size: 2rem;
+}
+#layout .infoUser a
+{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 3rem;
+    border-color: black;
+    width: 50%;
+    margin: auto;
+    transition-duration: 0.5s;
+}
+#layout .infoUser a:hover
+{
+    color: white;
+    background: rgb(133, 131, 131);
+    transition-duration: 0.5s;
+}
+
+/* FOOTER */
+/*
+MEME CSS QUE INDEX
+*/
+
+/********************************************************************************/
+
+/********** NOS RECETTES + NOS SMOOTHIES + PRODUITS RECETTESFAV + EN-TETE BAR **********/
+
+/* EN-TETE */
+#en-tete
+{
+    text-align: center;
+    margin: 7rem 0 0 0;
+}
+#en-tete a
+{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 6rem auto;
+    border-radius: 3rem;
+    background: rgb(242, 96, 121);
+    padding: 1.5rem 3rem;
+    font-size: 2.5rem;
+    transition-duration: 0.5s;
+}
+#en-tete a:hover
+{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+.titre
+{
+    border: solid rgb(242, 96, 121) 0.4rem;
+    flex: 1;
+    margin: 6rem 0 -3rem -7rem;
+    text-align: center;
+    height: 35rem;
+    max-width: 100%;
+}
+#recettes h1, #smoothies h1, #bar h1
+{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 auto;
+    font-size: 8rem;
+    max-width: 80%;
+}
+#recettes .image
+{
+    background: url("../img/photos/smooth-min.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 350px;
+    flex: 1;
+}
+#smoothies .image
+{
+    background: url("../img/photos/jus-ananas-orange.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 350px;
+    flex: 1;
+}
+#bar .image
+{
+    background: url("../img/photos/3smooth.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 350px;
+    flex: 1;
+}
+.texte
+{
+    flex-basis: 100%;
+    margin-top: 9rem;
+}
+#en-tete p
+{
+    width: 75%;
+    margin: 0 auto;
+    line-height: 3.5rem;
+    font-size: 2.5rem;
+}
+
+/* PRODUITS */
+#recettesFav #produits
+{
+    margin-top: 10rem;
+}
+#recettes article, #smoothies article, #recettesFav article
+{
+    text-align: -webkit-center;
+    margin-bottom: 5rem;
+}
+#recettes h2, #smoothies h2, #recettesFav h2
+{
+    font-weight: 700;
+    font-size: 4rem;
+    margin: auto;
+    max-width: 82%;
+}
+.imgProduits
+{
+    height: 28rem;
+    background-size: cover;
+    background-position: center;
+}
+#recettes .imgProduits, #recettesFav .imgProduits
+{
+    text-align: right
+}
+#recettes #produits a, #smoothies #produits .block, #recettesFav #produits a
+{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: black;
+    border: 0.4rem solid rgb(242, 96, 121);
+    padding: 5rem 0rem 2rem;
+    width: 70%;
+    margin-top: -4rem;
+}
+#recettes .fav, #recettesFav .fav
+{
+    width: 5rem;
+    height: auto;
+    margin: 1rem 1rem 0 0;
+}
+#recettes #produits a:hover, #recettesFav #produits a:hover
+{
+    animation: bounce 0.35s ease infinite alternate;
+}
+#recettesFav #produits .alert
+{
+    width: 80%;
+    margin: auto;
+}
+#verifFav
+{
+    background: rgba(242, 96, 121, 0.8);
+    width: 60%;
+    text-align: center;
+    margin: -3rem auto;
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Montserrat Alternates';
+    font-weight: 600;
+    padding: 1rem 1rem 0;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column
+}
+#verifFav span
+{
+    border-radius: 2rem;
+    border: white 1px solid;
+    cursor: pointer;
+    width: 60%;
+    margin: 0 auto 1rem;
+}
+#verifFav .no:hover
+{
+    background: rgb(242, 96, 121);
+    animation: bounceNone 0.5s ease infinite;
+}
+#verifFav .yes:hover
+{
+    background: rgb(242, 96, 121);
+    animation: bounce 0.35s ease infinite alternate;
+}
+
+/********************************************************************************/
+
+/********** CONNEXION + NEWUSER + EN-TETE RECETTESFAV + EN-TETE INSTRUCTIONS **********/
+
+/* EN-TETE */
+#connexion, #newUser
+{
+    text-align: center;
+}
+#connexion #en-tete, #recettesFav #en-tete, #newUser #en-tete
+{
+    width: 100%;
+    padding: 16rem 0;
+    background: url("../img/photos/detox cure smoothie.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#recipe #en-tete
+{
+    width: 100%;
+    padding: 26rem 0;
+    background-position: center;
+    background-size: cover;
+}
+#connexion h1, #recettesFav h1, #newUser h1
+{
+    border: 0.4rem solid rgba(242, 98, 121, 0.8);
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 14rem 0rem 4rem;
+    position: relative;
+    z-index: 1;
+    margin-top: -11.5rem;
+    font-size: 8rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+#connexion .lightfont, #newUser .lightfont
+{
+    font-size: 2.5rem;
+    max-width: 80%;
+    margin: 4rem auto;
+}
+#connexion a, #newUser a, #recipe a
+{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 6rem auto;
+    border-radius: 3rem;
+    background: rgb(242, 96, 121);
+    padding: 1.5rem 3rem;
+    font-size: 2.5rem;
+    transition-duration: 0.5s; 
+}
+#recipe a:hover
+{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+/* FORMULAIRE */
+#connexion form, #newUser form, #message form
+{
+    box-shadow: 0px 0px 9px -1px rgb(128, 128, 128);
+    margin: 7rem auto;
+    background: rgb(250, 247, 247);
+    font-size: 2.5rem;
+    padding: 6rem 0;
+    position: relative;
+}
+input[type="text"], input[type="password"], textarea
+{
+    border: solid 1px rgb(242, 98, 121);
+    border-radius: 15rem;
+    height: 7rem;
+    width: 80%;
+    padding-left: 4rem;
+    resize: none;
+}
+input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::placeholder
+{
+    color: rgb(242, 98, 121);
+    font-family: 'Montserrat Alternates';
+    margin: 3rem 0;
+}
+textarea
+{
+    padding-top: 3rem;
+}
+input[type="submit"]
+{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 3rem;
+    background: rgb(242, 96, 121);
+    padding: 1rem 3rem;
+    border: none;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    bottom: -5.5rem;
+    left: 50%;
+}
+#newUser form input[type="submit"]
+{
+    bottom: -7rem;
+}
+
+/********************************************************************************/
+
+/********** INSTRUCTIONS RECETTE **********/
+#recipe h1
+{
+    border: 0.4rem solid rgb(242, 96, 121);
+    text-align: center;
+    font-weight: 800;
+    width: 70%;
+    padding: 6rem 0 2rem;
+    margin: -4rem auto 2rem;
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+#recipe section a
+{
+    flex-basis: 100%;
+    margin-bottom: 4rem;
+}
+#recipe .ingredient
+{
+    width: 30%;
+    margin-bottom: 3rem;
+}
+#recipe .ingredient h3
+{
+    z-index: 1;
+}
+#recipe .ingredient span
+{
+    background: white;
+    padding: 0 3rem;
+    color: green;
+    font-size: 3rem;
+    font-weight: 700;
+}
+#recipe .ingredient div
+{
+    padding: 2rem 2rem 1rem;
+    margin-top: -1.5rem;
+    border: solid 2px green;
+    font-size: 2.5rem;
+    font-weight: 600;
+    width: 100%;
+}
+#recipe .recipe
+{
+    width: 60%;
+    line-height: 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+#recipe .ingredient ul
+{   
+    list-style: none;
+}
+#recipe .ingredient li:before, #recipe .recipe li:before
+{
+    content: "- ";
+}
+#recipe .recipe ul
+{
+    list-style: decimal;
+}
+
+/********************************************************************************/
+
+/********** BAR **********/
+.horaires.title-findUs
+{
+    width: 100%!important;
+    padding: 2rem 0;
+    margin: 0;
+}
+#message h2
+{
+    text-align: left;
+    margin-left: 6rem;
+    font-size: 6rem;
+    font-weight: 700;
+}
+#message .send-message
+{
+    height: 18rem!important;
+    border-radius: 3rem!important;
+}
+#message .send-message::placeholder
+{
+    vertical-align: top;
+}
+#message form
+{
+    width: 100%;
+    text-align: center;
+}
+
+/********************************************************************************/
+
+/********** MEDIA QUERIES **********/
+@media screen and (max-width: 950px)
+{
+    #accueil
+    {
+        text-align: center;
+    }
+    #accueil .desktopIndexMenu nav a, #accueil .desktopIndexMenu nav, #layout .navDesktop a, #layout .navDesktop, .frame, .image
+    {    
+        display: none;
+    }
+    #connexion h1, #recettesFav h1, #newUser h1, #recipe h1
+    {
+        padding: 3rem 0;
+        margin-top: 0;
+        width: 100%;
+    }
+    #accueil .mobileIndexMenu, #layout .mobileIndexMenu
+    {
+        display: block;
+    }
+    #accueil .mobileIndexMenu p 
+    {
+        text-transform: uppercase;
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 11rem;
+    }
+    #layout .mobileIndexMenu p
+    {
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+    #accueil #findUs > div, #bar #findUs > div
+    {
+        width: 100%;
+    }
+    #recettes .titre, #smoothies .titre, #bar .titre
+    {
+        margin: auto;
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    #accueil main img, .milkshakefraise
+    {
+        display: none;
+    }
+    #accueil .text-index-header
+    {
+        margin: auto;
+        text-align: center;
+        padding: 5rem 0 8rem 0;
+    }
+    #accueil #diy
+    {
+        text-align: center;
+    }
+    #accueil #presentation > div
+    {
+        width: 100%;
+        text-align: center;
+    }
+    #recettes h1, #smoothies h1
+    {
+        font-size: 7rem;
+    }
+    .frame
+    {
+        width: 100%;
+        height: 50rem;
+        margin: 0;
+    }
+    .title-text
+    {
+        width: 100%;
+    }
+}

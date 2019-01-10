@@ -1,0 +1,34 @@
+<main id="recettes">
+    <section id="en-tete" class="row">
+        <div class="image">
+        </div>
+        <div class="titre d-flex align-items-center">
+            <h1>Nos recettes</h1>
+        </div>
+        <div class="texte">
+            <p class="lightfont">Des recettes simples, à réaliser chez vous. Petits-déjeuners, gôuters, nos recettes originales raviront les plus petits comme les plus grands.</p>
+            <p class="lightfont">Nos recettes sont faites avec des fruits bio, ce n'est pas indispensable mais nous vous le recommandons. Il est également préférable d'utiliser des fruits de saison.</p>
+        </div>
+        <a href="recettesFav.php"><i class="far fa-heart mr-3"></i> Vos recettes favorites</a>
+    </section>
+
+    <section id="produits" class="row">
+        <?php foreach($myRecipe as $value): ?>
+        <article class="col-sm-12 col-md-6 col-xl-4">
+            <div class="imgProduits" style="background-image:url(<?= $value['imgSrcRecipe'] ?>)">
+            <?php if($value["InFavorite"] == "true")
+                {
+                    echo " <img class='fav' src='img/icons/fullheart.png' alt='heart' data-fav='".$value['id']."'>" ;
+                } 
+                else
+                {
+                    echo " <img class='fav' src='img/icons/emptyheart.png' alt='heart' data-fav='".$value['id']."'>" ;
+                } ?>
+            </div>
+            <a href="instructionsRecette.php?id=<?= $value['id'] ?>">
+                <h2><?= $value["recipeName"] ?></h2>
+            </a>
+        </article>
+        <?php endforeach; ?>
+    </section>
+</main>

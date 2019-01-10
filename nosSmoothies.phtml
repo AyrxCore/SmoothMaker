@@ -1,0 +1,22 @@
+<main id="smoothies">
+    <section id="en-tete" class="row">
+        <div class="image col-6">
+        </div>
+        <div class="titre col-6 d-flex align-items-center">
+            <h1>Nos smoothies</h1>
+        </div>
+        <div class="texte">
+            <p class="lightfont">Des smoothies fait maison, avec des produits bio et de saison. Au plus possible nous favorisons les producteurs locaux afin de vous proposer des produits Eco-responsable, et bla bla bla.</p>
+        </div>
+        <a href="lebar.php">Venez déguster nos smoothies</a>
+    </section>
+
+    <section id="produits" class="row">
+        <?php foreach($user as $value): ?>
+        <article class="col-sm-12 col-md-6 col-xl-4">
+            <div class="imgProduits" style="background-image:url(<?= $value['imgSrc'] ?>)"></div>
+            <div class="block"><h2><?= $value["productName"] ?></h2></div>
+        </article>
+        <?php endforeach; ?>
+    </section>
+</main>

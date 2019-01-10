@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Smooth Maker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+
+<body id="accueil">
+    <header>
+        <div id="header-contenu">
+            <section class="desktopIndexMenu d-flex justify-content-between">
+                <img class="logo" src="img/logo/logoblanc.svg" alt="Logo SmoothMaker">
+                <nav class="d-flex justify-content-between align-items-center col-xl-6 col-lg-8">
+                    <a class="text-white text-uppercase" href="index.php">Accueil</a>
+                    <a class="text-white text-uppercase" href="nosSmoothies.php">Smoothies</a>
+                    <a class="text-white text-uppercase" href="nosRecettes.php">Recettes</a>
+                    <a class="text-white text-uppercase" href="lebar.php">Le bar</a>
+                </nav>
+            </section>
+            <section class="title-imgIndexHeader">
+                <div class="text-index-header col-xl-7">
+                    <p class="text-uppercase text-white">Fabriquant de smoothies artisanal</p>
+                    <a class="btn discover" href="nosSmoothies.php">Decouvrir</a>
+                </div>
+                <img class="milkshakefraise" src="img/photos/milkshakefraise.png" alt="fraise">
+            </section>
+            <!-- Menu mobile caché -->
+            <section class="mobileIndexMenu">
+                <p class="menuMobile btn discover"><i class="fas fa-bars"></i> Menu</p>
+                <nav class="navMobile" style="display:none">
+                    <a class="nav-link text-white text-uppercase mx-4" href="index.php">Accueil</a>
+                    <a class="nav-link text-white text-uppercase mx-4" href="nosSmoothies.php">Smoothies</a>
+                    <a class="nav-link text-white text-uppercase mx-4" href="nosRecettes.php">Recettes</a>
+                    <a class="nav-link text-white text-uppercase mx-4" href="lebar.php">Le bar</a>
+                </nav>
+            </section>
+            <!-- ****************** -->
+        </div>
+    </header>
+
+    <main>
+        <!-- Presentation -->
+        <section id="presentation">
+            <div>
+                <h1>SmoothMaker</h1>
+                <p class="lightfont">Votre producteur de smoothie artisanal à Lyon</p> 
+            </div>
+            <article class="d-flex justify-content-around align-items-center">
+                <img class="col-5" src="img/photos/national-smoothie.png" alt="Dessin de 3 smoothies">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec erat risus, efficitur non malesuada ut, sollicitudin id 
+                    est. Fusce ac velit rhoncus, ornare erat ac, vulputate neque.
+                    Proin aliquet, erat ac vulputate sagittis, sem diam porta purus,
+                    quis rhoncus ante mi eu sapien. Donec elementum turpis in nisi
+                    sagittis sollicitudin.</p>
+                    <p>Elit et tempor cursus, felis risus congue ipsum, vitae euismod
+                    felis leo vitae elit. Nulla laoreet est vel tincidunt posuere.
+                    Fusce nisl sem, auctor vel risus vel, pharetra imperdiet tellus.
+                    Nam quis justo ac risus sodales pulvinar. Sed interdum eget
+                    risus sed semper. Interdum et malesuada fames ac ante ipsum
+                    primis in faucibus.</p>
+                </div>
+            </article>
+        </section>
+        <!-- Nos Smoothies -->
+        <section id="produits">
+            <h2>Nos smoothies</h2>
+            <hr>
+            <section class="row">
+                <?php foreach($user as $value): ?>
+                <article class="col-sm-12 col-lg-6 col-xl-4">
+                    <div class="imgProduits" style="background-image:url(<?= $value['imgSrc'] ?>)">
+                    </div>
+                    <div class="block"><h3><?= $value["productName"] ?></h3></div>
+                </article>
+                <?php endforeach; ?>
+            </section>
+        </section>    
+        <!-- Nous trouvez -->
+        <section id="findUs" class="row">
+            <div class="title-text">
+                <div class="title-findUs">
+                    <h2>Nous trouver</h2>
+                    <p class="lightfont">venez boire un coup smooth détente</p>
+                </div>
+                <div class="text-findUs">
+                    <p><i class="fas fa-map-maker-alt"></i>25, rue République</p>
+                    <p>69002 Lyon</p>
+                    <p> <i class="fas fa-phone"></i> 04 78 02 03</p>
+                    <p><i class="fas fa-envelope"></i> smooth@maker.fr</p>
+                    <p class="lightfont">Venez profiter de la terrasse ombragée. Nos smoothies peuvent être servis accompagnés de petites douceurs gourmandes.</p>
+                </div> 
+            </div>
+            <div class="frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11139.690931447602!2d4.899485299999999!3d45.732644349999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1546503954206" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>            
+            </div>
+        </section>
+        
+        <!-- Découvez nos smoothies DIY -->
+        <section id="diy">
+            <h2>Découvrez les DIY smoothie</h2>
+            <div class="d-flex row justify-content-around align-items-center">
+                <img class="col-xl-6" src="img/photos/fond rose.jpg" alt="Une main tenant un smoothie">
+                <div class="col-xl-6 col-12">
+                    <h4 class="lightfont">Nos Smoothis, chez vous, par vous.</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nobis ratione deleniti iusto voluptatum sunt velit
+                    necessitatibus eaque? Quisquam et fugiat vel qui odit,
+                    enim in! Optio explicabo consequatur magni laborum?</p> 
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nobis ratione deleniti iusto voluptatum sunt velit
+                    necessitatibus eaque? Quisquam et fugiat vel qui odit,
+                    enim in! Optio explicabo consequatur magni laborum?</p>
+                    <a class="mt-4" href="nosRecettes.php"> Les Recettes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Partage ton smoothie sur les réseaux sociaux avec </p>
+        <p>#Smooth Maker</p>
+        <div>
+            <a href="#"><img class="reseaux" src="img/icons/instagram.png" alt="Instagram"></a>
+            <a href="#"><img class="reseaux" src="img/icons/facebook.png" alt="Facebook"></a>
+        </div>
+        <small>2018 © SmoothMaker Lyon - Mentios Légales - Contact</small>
+    </footer>
+
+</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+    <script src="js/main.js"></script>
+    <!-- <script type="text/javascript" src="js/helium.js" onload="helium.init()" async></script> -->
+</html> 

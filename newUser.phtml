@@ -1,0 +1,13 @@
+<main id="newUser">
+    <div id="en-tete"></div>
+    <h1>Creer un compte utilisateur</h1>
+    <p class="lightfont">Créer votre compte utilisateur vous permettra d'enregistrer vos recettes favorites !</p>
+    <form method="POST" action="newUser.php">
+        <input class="my-4" type="text" name="email" id="email" aria-describedby="emailHelp" placeholder="Adresse email">
+        <input class="my-4" type="password" name="mdp" id="password" placeholder="Mot de passe">
+        <input class="my-4" type="text" name="nom" id="nom" placeholder="Nom">
+        <input class="my-4" type="text" name="prenom" id="prenom" placeholder="Prénom"><br>
+        <input class="my-4" type="submit" name="creation" value="Créer un nouvel utilisateur">
+    </form>
+    <div class="failed"></div>
+</main>
