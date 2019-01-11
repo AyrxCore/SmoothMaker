@@ -10,7 +10,7 @@ $(document).ready(function()
     });
     $(".create").on('submit', saveUser);
     $(".connect").on('submit',verifInfo);
-    $("#recettes .fav").on('click', clickFav);
+    $(".fav").on('click', clickFav);
     $("#recettesFav .fav").on('click', menuModifFav);
     $(".no").on("click", function()
     {
@@ -129,9 +129,11 @@ function verifMail(email)
     }
 }
 
-function clickFav()
+function clickFav(e)
 {
+    e.preventDefault();
     var id = $(this).data("fav");
+    console.log($(this))
     if($(this).attr("src") == "img/icons/emptyheart.png")
     {
         $.ajax(
@@ -145,6 +147,7 @@ function clickFav()
                 if(data.result == true)
                 {
                     $(this).attr("src", "img/icons/fullheart.png");
+                    $(this).html('<i class="fas fa-heart mr-3"></i>Retirer cette recette de vos favoris');
                 }
                 else if(data.result == false && data.redirect == true)
                 {
@@ -164,6 +167,7 @@ function clickFav()
                 if(data.result == true)
                 {
                     $(this).attr("src", "img/icons/emptyheart.png");
+                    $(this).html("<i class='far fa-heart mr-3'></i>Ajouter cette recette à vos favoris");
                 }
             }.bind(this)
         });
