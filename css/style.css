@@ -33,6 +33,10 @@ body
     width: 100%;
     display: block;
 }
+.fav
+{
+    cursor: pointer;
+}
 @keyframes bounce
 { 
     from {transform: translateY(0);} 
