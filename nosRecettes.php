@@ -49,7 +49,8 @@ else
         SELECT
         *,
         IF(
-        id IN(
+        id 
+        IN(
         SELECT idRecipe
         FROM favorite
         WHERE idUser =?
@@ -63,13 +64,13 @@ else
     }
     else
     {
-    $requete = $bdd->prepare("
-    SELECT
-    *,
-    'false' AS InFavorite
-    FROM recipe
-    ");
-    $requete->execute();
+        $requete = $bdd->prepare("
+        SELECT
+        *,
+        'false' AS InFavorite
+        FROM recipe
+        ");
+        $requete->execute();
     }
     $myRecipe = $requete->fetchAll();
 
