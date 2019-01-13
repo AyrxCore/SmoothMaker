@@ -1,7 +1,7 @@
 <main id="recipe" class="row">
     <div id="en-tete" style="background-image:url(<?= $recipe['imgSrcRecipe'] ?>)"></div>
     <h1><?= $recipe["recipeName"] ?></h1>
-    <a class="fav" data-fav="<?= $recipe['id'] ?>"><i class="far fa-heart mr-3"></i> Ajouter cette recette à vos favoris</a>
+    <?php echo $message; ?>
     <section class="d-flex justify-content-between flex-wrap">  
         <article class="ingredient col-12 col-lg-4 d-flex flex-column align-items-center">
             <h3><span class="text-uppercase">Ingrédients</span></h3>
